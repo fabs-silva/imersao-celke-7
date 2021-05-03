@@ -4,56 +4,40 @@
 
 ### Criar o arquivo package.json
 
-ˋˋˋ
-npm init
-ˋˋˋ
+`npm init`
 
 ### Instalar o Express
 
 Gerenciador de requisições, rotas e URLs, entre outras funcionalidades
 
-ˋˋˋ
-npm install express --save
-ˋˋˋ
+`npm install express --save`
 
 ### Rodar o projeto
 
-ˋˋˋ
-node app.js
-ˋˋˋ
+`node app.js`
 
 ### Acessar o projeto no navegador
 
-ˋˋˋ
-<http://localhost:3000>
-ˋˋˋ
+`<http://localhost:3000>`
 
 ### Instalar a dependência Nodemon
 
 Monitora qualquer mudança no seu código fonte e reinicia automaticamente o servidor
 
-ˋˋˋ
-npm install -g nodemon
-ˋˋˋ
+`npm install -g nodemon`
 
 Dependência instalada 'globalmente', não apenas no projeto (-g)
 
 ### Rodar o projeto usando o Nodemon
 
-ˋˋˋ
-nodemon app.js
-ˋˋˋ
+`nodemon app.js`
 
 ### Instalar o gerenciador de banco de dados
 
-ˋˋˋ
-npm install --save sequelize
-ˋˋˋ
+`npm install --save sequelize`
 
 ## COMO RODAR O PROJETO BAIXADO
 
 ### Instalar todas as dependências indicadas pelo package.json
 
-ˋˋˋ
-npm install
-ˋˋˋ
+`npm install`
