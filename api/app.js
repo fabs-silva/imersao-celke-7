@@ -14,6 +14,12 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
+function sleep(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  })
+}
+
 app.get('/', async (req, res) => {
   await Anuncio.findAll({ order: [['id', 'DESC']] })
     .then((anuncios) => {
@@ -46,6 +52,8 @@ app.get('/visualizar/:id', async (req, res) => {
 
 
 app.post('/cadastrar', async (req, res) => {
+  await sleep(3000);
+
   await Anuncio.create(req.body)
     .then(() => {
       return res.json({
@@ -61,6 +69,8 @@ app.post('/cadastrar', async (req, res) => {
 });
 
 app.put('/editar', async (req, res) => {
+  await sleep(3000);
+
   await Anuncio.update(req.body, {
     where: { id: req.body.id }
   }).then(() => {
@@ -77,6 +87,8 @@ app.put('/editar', async (req, res) => {
 });
 
 app.delete('/apagar/:id', async (req, res) => {
+  await sleep(3000);
+
   await Anuncio.destroy({
     where: { id: req.params.id }
   }).then(() => {
